@@ -1,0 +1,11 @@
+{
+  "name": "modelboot",
+  "version": "0.0.1",
+  "description": "small demo",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "moment": "~2.10.3",
+    "eonasdan-bootstrap-datetimepicker": "~4.14.30"
+  }
+}

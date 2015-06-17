@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/moment/min/moment.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="custom/js/loader.js"></script>
+    <script src="custom/js/render.js"></script>
+    <script src="custom/js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <title>Home</title>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <h1 class="text-center">Boot Inspection</h1>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2" style="background-color: #f8f8f8; border-radius: 10px;">
+            <form name="searchForm" id="searchForm" method="GET">
+                <input class="span2" id="country" name="country" type="hidden">
+                <input class="span2" id="region" name="region" type="hidden">
+                <input class="span2" id="city" name="city" type="hidden">
+                <input class="span2" id="model" name="model" type="hidden">
+
+                <h3 class="text-left">Select Location</h3>
+
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownCountry" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Choose Country
+                        <span class="caret"></span>
+                    </button>
+                    <ul id="countryItems" class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownCountry">
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownRegion" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" disabled>
+                        Choose Region
+                        <span class="caret"></span>
+                    </button>
+                    <ul id="regionItems" class="dropdown-menu" aria-labelledby="dropdownRegion">
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownCity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" disabled>
+                        Choose City
+                        <span class="caret"></span>
+                    </button>
+                    <ul id="cityItems" class="dropdown-menu" aria-labelledby="dropdownCity">
+                    </ul>
+                </div>
+                <h3 class="text-left">Filters</h3>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownModel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Choose Model
+                        <span class="caret"></span>
+                    </button>
+                    <ul id="modelItems" class="dropdown-menu" aria-labelledby="dropdownModel">
+                    </ul>
+                </div>
+                <h3 class="text-left">From Date:</h3>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepickerFrom'>
+                        <input type='text' class="form-control" id="fromDate" name="fromDate"/>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <h3 class="text-left">To Date:</h3>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepickerTo'>
+                        <input type='text' class="form-control"  id="toDate" name="toDate"/>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <br/><button id="submitForm" class="btn btn-success btn-block" type="submit" disabled>Submit</button>
+            </form>
+        </div>
+        <div class="col-md-10">
+            <table class="table table-striped">
+                <thead>
+                <th>Model</th>
+                <th>Location</th>
+                <th>Time</th>
+                <th>The number of boots</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Asus</td>
+                    <td>Africa</td>
+                    <td>Mon 12.00 1991</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Asus</td>
+                    <td>Africa</td>
+                    <td>Mon 12.00 1991</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Asus</td>
+                    <td>Africa</td>
+                    <td>Mon 12.00 1991</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Asus</td>
+                    <td>Africa</td>
+                    <td>Mon 12.00 1991</td>
+                    <td>45</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+
+</html>

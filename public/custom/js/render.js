@@ -49,7 +49,7 @@ var ViewRender = (function($){
             }).prop('disabled',true);
             var query = $('form').serialize();
             $.ajax({ type: 'GET', url: '/list?' + query, success: function(res){
-                    alert(res);
+                    alert(JSON.stringify(res));
                 }
             });
             return false;

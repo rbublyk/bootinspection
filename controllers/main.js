@@ -33,5 +33,8 @@ exports.getList = function (req, res) {
         toDate: req.query.toDate
     };
     console.log(query);
+    // you can send it like this
     res.json([{ model: 'Asus', location: 'Finland', date: '2015-02-12', numBoots: 5}, { model: 'Asus', location: 'Finland', date: '2015-02-12', numBoots: 5}, { model: 'Asus', location: 'Finland', date: '2015-02-12', numBoots: 5}]);
+    // or you can send it like this
+    //res.json([['Asus', 'Finland', '2015-02-12', 5], ['Asus', 'Finland', '2015-02-12', 5], ['Asus', 'Finland', '2015-02-12', 5]]);
 }

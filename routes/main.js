@@ -24,7 +24,7 @@ router.get('/models', function (req, res, next){
 });
 
 router.get('/list', function (req, res, next){
-  mainController.list(req,res);
+  mainController.getList(req,res);
 });
 
 module.exports = router;

@@ -3,8 +3,7 @@ var Loader = (function($){
     var Loader = function(){}
 
     Loader.prototype.loadCountries = function(){
-        $.getJSON('/countries', function(res){
-            var countries = res.countries;
+        $.getJSON('/countries', function(countries){
             if(countries){
                 return _populateOptions(countries, '#countryItems');
             }
@@ -13,8 +12,7 @@ var Loader = (function($){
     }
 
     Loader.prototype.loadRegions = function(country){
-        $.getJSON('/regions', { country: country }, function(res){
-            var regions = res.regions;
+        $.getJSON('/regions', { country: country }, function(regions){
             if(regions){
                 return _populateOptions(regions, '#regionItems');
             }
@@ -23,8 +21,7 @@ var Loader = (function($){
     }
 
     Loader.prototype.loadCities = function(region){
-        $.getJSON('/cities', { region: region }, function(res){
-            var cities = res.cities;
+        $.getJSON('/cities', { region: region }, function(cities){
             if(cities){
                 return _populateOptions(cities, '#cityItems');
             }
@@ -33,8 +30,7 @@ var Loader = (function($){
     }
 
     Loader.prototype.loadModels = function(){
-        $.getJSON('/models', function(res){
-            var models = res.models;
+        $.getJSON('/models', function(models){
             if(models){
                 return _populateOptions(models, '#modelItems');
             }

@@ -5,25 +5,25 @@ exports.home = function (req, res){
 }
 
 exports.getCountries = function(req, res){
-    res.json({ countries: [ 'Finland', 'Ukraine', 'USA' ] });
+    res.json([ 'Finland', 'Ukraine', 'USA' ]);
 }
 
 exports.getRegions = function(req, res){
     var country = req.query.country;
     // You should return regions of the selected country
-    res.json({ regions: [ 'Syms\'kii', 'Kharkivs\'kii', 'Kyivs\'kii' ] });
+    res.json([ 'Syms\'kii', 'Kharkivs\'kii', 'Kyivs\'kii' ]);
 }
 
 exports.getCities = function(req, res){
     var region = req.query.region;
     // You should return cities of the selected region
-    res.json({ cities: [ 'Sumy', 'Kharkiv', 'Kyiv' ] });
+    res.json([ 'Sumy', 'Kharkiv', 'Kyiv' ]);
 }
 
 exports.getModels = function(req, res){
-    res.json({ models: [ 'HT-230', 'HD-5500', 'DK-123' ] });
+    res.json([ 'HT-230', 'HD-5500', 'DK-123' ]);
 }
 
-exports.list = function (req, res) {
-    res.json({name: 'test'});
+exports.getList = function (req, res) {
+    res.json([{ model: 'Asus', date: '2015-02-12', location: 'Finland', numBoots: 5}, { model: 'Asus', date: '2015-02-12', location: 'Finland', numBoots: 5}, { model: 'Asus', date: '2015-02-12', location: 'Finland', numBoots: 5}]);
 }

@@ -25,5 +25,13 @@ exports.getModels = function(req, res){
 }
 
 exports.getList = function (req, res) {
-    res.json([{ model: 'Asus', date: '2015-02-12', location: 'Finland', numBoots: 5}, { model: 'Asus', date: '2015-02-12', location: 'Finland', numBoots: 5}, { model: 'Asus', date: '2015-02-12', location: 'Finland', numBoots: 5}]);
+    var query = {
+        country: req.query.country,
+        city: req.query.city,
+        model: req.query.model,
+        fromDate: req.query.fromDate,
+        toDate: req.query.toDate
+    };
+    console.log(query);
+    res.json([{ model: 'Asus', location: 'Finland', date: '2015-02-12', numBoots: 5}, { model: 'Asus', location: 'Finland', date: '2015-02-12', numBoots: 5}, { model: 'Asus', location: 'Finland', date: '2015-02-12', numBoots: 5}]);
 }
